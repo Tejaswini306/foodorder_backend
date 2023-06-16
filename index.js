@@ -16,10 +16,9 @@ app.use('/api/auth',require("./Routes/Author"));
 app.get('/', (req, res) => {
   res.send('hello world')
 })
-
-/*if(process.env.NODE_ENV=='production'){
+if(process.env.NODE_ENV=='production'){
   app.use(express.static("Frontend/build"))
-}*/
+}
 
 app.listen(port, () => {
     console.log(`Example app listening on http://localhost:${port}`)
